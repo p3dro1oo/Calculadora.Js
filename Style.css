@@ -1,0 +1,115 @@
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+body {
+    background-color: rgb(33, 33, 33);
+    background-position: center center;
+    background-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+main{
+   
+    background-color: rgb(104, 130, 152);
+    margin: 200px auto;
+    padding: 20px;
+    width: 16.9%;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 4px;
+    position: relative;}
+
+
+main h1 {
+    color: rgb(33, 33, 33);
+    letter-spacing: 3px;
+    font-weight: 200;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  
+  main:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 4px;
+    background: linear-gradient(120deg, #f20041, #0575E6, #def200);
+    background-size: 300% 300%;
+    clip-path: polygon(0% 100%, 3px 100%, 3px 3px, calc(100% - 3px) 3px, calc(100% - 3px) calc(100% - 3px), 3px calc(100% - 3px), 3px 100%, 100% 100%, 100% 0%, 0% 0%);
+  }
+  
+  main:after {
+    animation: frame-enter 1s forwards ease-in-out reverse, gradient-animation 4s ease-in-out infinite;
+  }
+  
+.botao{
+    background-color: rgb(45, 45, 45);
+    color: white;
+    width: 50px;
+    height: 50px;
+    margin: 3px;
+    font-size: 25px;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+}
+.botao:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(210, 46, 73);
+}
+
+#resultado{
+    width: 207px;
+    height: 30px;
+    margin: 5px;
+    font-size: 25px;
+    padding:  5px;
+    background-color: #fff;
+    color: black;
+    text-align: right;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Movimentação */
+@keyframes gradient-animation {
+  0% {
+    background-position: 15% 0%;
+  }
+  50% {
+    background-position: 85% 100%;
+  }
+  100% {
+    background-position: 15% 0%;
+  }
+}
+
+@keyframes frame-enter {
+  0% {
+    clip-path: polygon(0% 100%, 3px 100%, 3px 3px, calc(100% - 3px) 3px, calc(100% - 3px) calc(100% - 3px), 3px calc(100% - 3px), 3px 100%, 100% 100%, 100% 0%, 0% 0%);
+  }
+  25% {
+    clip-path: polygon(0% 100%, 3px 100%, 3px 3px, calc(100% - 3px) 3px, calc(100% - 3px) calc(100% - 3px), calc(100% - 3px) calc(100% - 3px), calc(100% - 3px) 100%, 100% 100%, 100% 0%, 0% 0%);
+  }
+  50% {
+    clip-path: polygon(0% 100%, 3px 100%, 3px 3px, calc(100% - 3px) 3px, calc(100% - 3px) 3px, calc(100% - 3px) 3px, calc(100% - 3px) 3px, calc(100% - 3px) 3px, 100% 0%, 0% 0%);
+  }
+  75% {
+    -webkit-clip-path: polygon(0% 100%, 3px 100%, 3px 3px, 3px 3px, 3px 3px, 3px 3px, 3px 3px, 3px 3px, 3px 0%, 0% 0%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0% 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 0% 100%);
+  }
+}
